@@ -52,8 +52,8 @@ allSuspects();
 console.log( 'Suspect three is:' + suspectThree );
 
 // 5.
-// code output = name: Ace Ventura pet: monkey
-// console.log has detectiveInfo() function passed in, this function returns hash variable detective
+// code output = name: Poirot
+// console.log has detectiveInfo() function passed in, this function returns "Poirot"
 var detective = {
   name : 'Ace Ventura',
   pet : 'monkey'
@@ -72,7 +72,7 @@ console.log(detectiveInfo());
 
 // 6.
 // code output = Steve / Ally / The murderer is John
-// Steve is shown when innerFunctions is called. Ally is shown when outerFunction is called, console.log has no access to any other variables apart from the global one which is John
+// innerFunctions()  = Steve.  outerFunction() is Ally, console.log has no access to any other variables apart from the global variable which is John - console.log should show The murderer is John
 var murderer = 'John';
 
 var outerFunction = function() {
@@ -92,7 +92,8 @@ console.log('The murderer is', murderer);
 // Make up your own episode which can be whatever you wish and the rest of the class will work out together what happened and what the output will be.
 
 var goodBoy = "Rocky";
-var goodBoy = function(){
-
-}
+var sillyBoy = function(goodBoy){
+  var goodBoy = "Snook";
+  console.log(goodBoy);
+};
 console.log(goodBoy + " is a good boy!!!");
